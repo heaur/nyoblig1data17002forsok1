@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bestilling av Kinobilletter</title>
+    <script src = "test.js"></script>
 </head>
 <body>
-$END$
+<h1>Bestilling av kinobilletter</h1>
+
+<form action="#">
+    <label for="filmer">Film:</label>
+    <select id="filmer" aria-label="Default select example">
+        <option value="blank"></option>
+        <option value="Mean girls">Mean girls</option>
+        <option value="Meangirls 2">Mean girls 2</option>
+        <option value="Clueless">Clueless</option>
+        <option value="10 things I hate about you">10 things I hate about you</option>
+    </select><br>
+
+    <label for="antall">Antall:</label>
+    <input type="number" id="antall">
+    <p id="antallError"></p><br>
+
+    <label for="forNavn">Fornavn:</label>
+    <input type="text" id="forNavn">
+    <p id="fornavnError"></p><br>
+
+    <label for="etterNavn">Etternavn:</label>
+    <input type="text" id="etterNavn">
+    <p id="etternavnError"></p><br>
+
+    <label for="tlfnr">Telefonnummer:</label>
+    <input type="tel" id="tlfnr">
+    <p id="tlfnrError"></p><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+    <p id="emailError"></p><br>
+
+    <button type="button" onclick="kjøpBilletter()">Kjøp billetter</button>
+</form>
+
+<h2>Alle billetter</h2>
+<ul id="liste"></ul>
+<div id="ut"></div>
+<button type="button" onclick="slettBilletter()">Slett alle billetter</button>
+
 </body>
 </html>
